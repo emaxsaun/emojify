@@ -1,0 +1,9 @@
+{
+  "name": "emojify",
+  "version": "1.0.0",
+  "description": "Turn a message into Slack :alphabet-<color>-<char>: emojis",
+  "bin": {
+    "emojify": "emojify.js"
+  },
+  "license": "MIT"
+}
