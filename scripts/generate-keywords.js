@@ -13,7 +13,7 @@ const DATASOURCE_URL = 'https://cdn.jsdelivr.net/npm/emoji-datasource@16.0.0/emo
 // Newer emoji may not exist in Slack yet, so stay a few Unicode versions back.
 const MAX_UNICODE_VERSION = 14.0;
 // Keywords shared by more emoji than this are too generic ("face", "animal").
-const MAX_EMOJI_PER_KEYWORD = 6;
+const MAX_EMOJI_PER_KEYWORD = 40;
 const MIN_KEYWORD_LENGTH = 3;
 const STOPWORDS = new Set(
   `the and for you your are was were with that this these those have has had not but all can get got
@@ -22,7 +22,10 @@ const STOPWORDS = new Set(
   little use used other open close closed mouth eye eyes face human person people man men woman women
   male female boy girl sign symbol nature object objects thing things white black red blue green yellow
   orange purple brown pink grey gray dark light square circle round shape button blue-square word
-  letter letters number numbers country nation flag banner great feature desk full keep heading next`.split(/\s+/)
+  letter letters number numbers country nation flag banner great feature desk full keep heading next
+  communication geometric accessibility squared direction gesture kanji ideograph cjk unified alphabet
+  digit indicator regional punctuation icon triangle haired unspecified rightwards leftwards upwards
+  downwards oclock republic meaning large heavy mark double pointing clothing accessories`.split(/\s+/)
 );
 
 const toChar = (unified) => unified.split('-').map((h) => String.fromCodePoint(parseInt(h, 16))).join('');
